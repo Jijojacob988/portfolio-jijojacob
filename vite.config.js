@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/Portfolio-Jijo/',  // ✅ Ensure correct base for GitHub Pages
-  assetsInclude: ['**/*.png', '**/*.PNG'],  // ✅ Fix PNG Import Issue
+  base: '/',  // ✅ Set base to '/' for Vercel
+  assetsInclude: ['**/*.png', '**/*.PNG'], // ✅ Fix PNG Import Issue
 });
