@@ -5,9 +5,9 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 const Hero = () => {
   const handleResumeClick = () => {
-    window.open('/Portfolio-Jijo/Jijo Jacob -CV.pdf', '_blank'); // Adjusted for the base URL
+    window.open('/Jijo Jacob -CV.pdf', '_blank'); // Use the direct path
   };
-
+  
   return (
     <div id='home' className='hero'>
       <img src={profile_img} alt="" className='profile-img' />
