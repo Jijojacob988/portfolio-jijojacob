@@ -11,7 +11,7 @@ const Hero = () => {
   return (
     <div id='home' className='hero'>
       <img src={profile_img} alt="" className='profile-img' />
-      <h1>I'm <span> Jijo Jacob</span> </h1>
+      <h1>I'm <span>  Jijo Jacob</span> </h1>
       <h2 className="animated-titles">
         <span>Full Stack Developer</span>
         <span>Store Manager</span>
@@ -26,7 +26,7 @@ const Hero = () => {
           <AnchorLink className='anchor-link' offset={50} href='#contact'>Connect with me</AnchorLink>
         </div>
         <div className="hero-resume" onClick={handleResumeClick} style={{ cursor: 'pointer' }}>
-          My resume
+        Resume
         </div>
       </div>
     </div>

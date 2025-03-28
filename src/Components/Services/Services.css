@@ -57,28 +57,36 @@
     transform: scale(1.05);
     transition: 0.4s;
 }
-@media(max-width:768px){
-    .services{
-        align-items: start;
-        gap: 70px;
+@media (max-width: 768px) {
+    .services {
+        align-items: center; /* Center the single card */
+        gap: 50px;
         margin: 20px 6%;
     }
     
-    .services-format{
+    .services-format {
         gap: 10px;
         padding: 20px;
-    }
-    .services-format h2{
-        font-size: 20px;
-    }
-    .services-format p{
-        font-size:  16px;
-        line-height: 26px;
-        max-width: 300px;
+        width: 90%; /* Reduce width for a rectangular shape */
+        max-width: 400px; /* Set a max width to maintain consistency */
+        height: auto; /* Allow the height to adjust dynamically */
+        border-radius: 12px; /* Slightly rounded corners for a better look */
     }
     
-    .services-container{
-        grid-template-columns: 1fr 1fr;
+    .services-format h2 {
+        font-size: 20px;
+    }
+    
+    .services-format p {
+        font-size: 16px;
+        line-height: 26px;
+        max-width: 100%;
+    }
+    
+    .services-container {
+        grid-template-columns: 1fr; /* Single column */
         gap: 20px;
+        width: 100%;
+        justify-items: center; /* Center the cards properly */
     }
 }
