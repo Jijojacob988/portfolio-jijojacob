@@ -19,7 +19,7 @@ const MyWork = () => {
               <p>{work.w_desc}</p>
               
               <div className="mywork-buttons">
-                <button onClick={() => window.open(work.live_demo, "_blank")}>Live Demo</button>
+                <button onClick={() => window.open(work.live_demo, "_blank")}>Live</button>
                 <button onClick={() => window.open(work.github, "_blank")}>GitHub</button>
               </div>
             </div>

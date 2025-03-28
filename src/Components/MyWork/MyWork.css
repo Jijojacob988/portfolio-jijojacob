@@ -9,37 +9,58 @@
 
 .mywork-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards in a row */
+    gap: 40px; /* Increased gap for better spacing */
+    justify-items: center;
+    width: 100%;
+    max-width: 1200px;
 }
 
 .mywork-item {
     text-align: center;
+    width: 100%;
+    max-width: 250px; /* Increased size of cards */
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: 0.4s;
+}
+
+.mywork-item:hover {
+    border: 2px solid #ff00ff;
+    background-image: linear-gradient(45deg, #3f0028, #582300);
+    transform: scale(1.05);
+    transition: 0.4s;
 }
 
 .mywork-item p {
-    
     color: #d4d4d4;
-    font-size: 20px;
-    line-height: 30px;
-    max-width: 300px;
-    
+    font-size: 18px;
+    line-height: 28px;
+    max-width: 100%;
+    margin-top: 8px;
 }
 
 .mywork-buttons {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 12px;
+    margin-top: 10px;
+    width: 100%;
 }
 
 .mywork-buttons button {
-    padding: 10px 20px;
-    background-color:rgb(129, 3, 81);
+    padding: 8px 16px;
+    background-color: rgb(129, 3, 81);
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 12px;
     transition: background-color 0.3s;
+    width: 100px;
+    text-align: center;
 }
 
 .mywork-buttons button:hover {
@@ -48,6 +69,8 @@
 
 .mywork-container img {
     width: 100%;
+    height: auto;
+    border-radius: 10px;
     transition: 0.3s;
     cursor: pointer;
 }
@@ -65,8 +88,8 @@
     gap: 10px;
     border-radius: 50px;
     border: 2px solid white;
-    padding: 20px 40px;
-    font-size: 20px;
+    padding: 15px 30px;
+    font-size: 18px;
     font-weight: 500;
     margin-bottom: 20px;
     transition: 0.6s;
@@ -78,10 +101,39 @@
 }
 
 .mywork-showmore:hover {
-    gap: 30px;
+    gap: 20px;
     transition: 0.6s;
 }
 
+/* Media Query for Medium and Small Screens */
+@media (max-width: 1024px) {
+    .mywork-container {
+        grid-template-columns: 1fr 1fr; /* 2 cards per row for medium screens */
+        gap: 25px;
+    }
+
+    .mywork-item {
+        max-width: 200px;
+        padding: 15px;
+    }
+
+    .mywork-item p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .mywork-buttons {
+        gap: 10px;
+    }
+
+    .mywork-buttons button {
+        padding: 6px 12px;
+        font-size: 11px;
+        width: 90px;
+    }
+}
+
+/* Media Query for Mobile Screens */
 @media (max-width: 768px) {
     .mywork {
         gap: 50px;
@@ -90,47 +142,37 @@
     }
 
     .mywork-container {
-        grid-template-columns: 1fr 1fr; /* 2 cards per row */
-        gap: 15px; /* Reduced gap to fit properly */
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
         width: 100%;
         justify-items: center;
     }
 
     .mywork-item {
         width: 100%;
-        max-width: 180px; /* Slightly smaller width for better fit */
-        padding: 15px;
-        border-radius: 12px;
-        border: 2px solid white;
-        background-color: rgba(0, 0, 0, 0.6);
-        text-align: center;
-        transition: 0.4s;
-    }
-
-    .mywork-item:hover {
-        border: 2px solid #ff00ff;
-        background-image: linear-gradient(45deg, #3f0028, #582300);
-        transform: scale(1.05);
-        transition: 0.4s;
+        max-width: 150px;
+        padding: 12px;
     }
 
     .mywork-item p {
         font-size: 14px;
         line-height: 22px;
-        max-width: 100%;
+    }
+
+    .mywork-buttons {
+        gap: 8px;
         margin-top: 8px;
     }
 
-    .mywork-container img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-        transition: 0.3s;
+    .mywork-buttons button {
+        padding: 6px 12px;
+        font-size: 11px;
+        width: 90px;
     }
 
     .mywork-showmore {
-        padding: 15px 30px;
-        font-size: 16px;
+        padding: 12px 25px;
+        font-size: 14px;
         margin: 10px auto;
         display: flex;
         justify-content: center;
